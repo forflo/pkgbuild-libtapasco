@@ -1,7 +1,5 @@
 # Maintainer: Florian Mayer <florian[dot]andrefranc[dot]mayer[at]fau[dot]de>
-# The makedependency "boost-65-compat" is available
-# at https://faui22m.cs.fau.de/orka/PKGBUILDs/boost-65-compat
-# gcc7 is available through the AUR
+# at https://faui22m.cs.fau.de/orka/PKGBUILDs/libtapasco
 
 pkgname=('libtapasco')
 pkgdesc='Tapasco C API libraries'
