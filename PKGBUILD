@@ -11,17 +11,17 @@ license=('BSD')
 makedepends=('cmake' 'gcc' 'binutils')
 depends=()
 
-source=('git+https://github.com/esa-tu-darmstadt/tapasco.git')
+source=('git+https://github.com/esa-tu-darmstadt/tapasco.git#branch=develop')
 sha256sums=('SKIP')
 OPTIONS=(!strip)
 
 _PREFIX=/opt/tapasco
 
 build() {
-   cd "${srcdir}"/tapasco
 
    local builddir="${srcdir}"/build-tapasco
 
+   cd "${srcdir}"/tapasco
    . setup.sh
    cd ..
    mkdir -p "${builddir}"
@@ -30,7 +30,7 @@ build() {
    cmake -DCMAKE_C_COMPILER=gcc \
          -DCMAKE_CXX_COMPILER=g++ \
          -DCMAKE_INSTALL_PREFIX:PATH="${pkgdir}"/opt/tapasco \
-         "${srcdir}/tapasco" .
+         "${srcdir}/tapasco/runtime" .
    make CFLAGS=-fno-lto -j16
 }
 
