@@ -22,7 +22,7 @@ build() {
    local builddir="${srcdir}"/build-tapasco
 
    cd "${srcdir}"/tapasco
-   . setup.sh
+   . tapasco-init.sh
    cd ..
    mkdir -p "${builddir}"
    cd "${builddir}"
